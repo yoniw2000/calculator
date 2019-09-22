@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <title>calculator </title>
+            <link rel="stylesheet" type="text/css" href="calculator.css">
+
+    </head>
+
+    <body onload=" ">
+        <script>
+            function dis(my_char) {
+                var sqr = document.getElementById("result").innerHTML += my_char;
+            }
+
+            function clr() {
+                var sqr = document.getElementById("result").innerHTML ="";
+                //eval(calculator.answer.value)"
+            }
+
+            function solve() {
+                var ans = eval(document.getElementById("result").innerHTML);
+                document.getElementById("result").innerHTML = ans;
+            }
+
+        </script>
+        
+
+        <table border="1"> 
+         <tr> 
+            <td colspan="3" id="result" text="white">  </td> 
+            <!-- clr() function will call clr to clear all value -->
+            <td onclick="clr()"class="bn"> c </td> 
+         </tr> 
+         <tr>            
+            <td onclick="dis('1')" class="bn">1 </td> 
+            <td onclick="dis('2')"class="bn">2 </td> 
+            <td onclick="dis('3')"class="bn">3 </td> 
+            <td onclick="dis('/')"class="bn">/ </td> 
+         </tr> 
+         <tr> 
+            <td  onclick="dis('4')" class="bn"> 4</td> 
+            <td  onclick="dis('5')" class="bn">5 </td> 
+            <td  onclick="dis('6')" class="bn">6 </td> 
+            <td  onclick="dis('-')" class="bn"> -</td> 
+         </tr> 
+         <tr> 
+            <td  onclick="dis('7')"class="bn">7 </td> 
+            <td  onclick="dis('8')"class="bn"> 8</td> 
+            <td  onclick="dis('9')"class="bn"> 9</td> 
+            <td  onclick="dis('+')"class="bn"> +</td> 
+         </tr> 
+         <tr>
+             <td onclick="dis('.')"class="bn">. </td>
+             <td onclick="dis('0')"class="bn"> 0</td>
+             <td onclick="dis('*')"class="bn">* </td>
+             <td onclick="solve()" id="eqlbutton">= </td>
+
+         </tr> 
+      </table> 
+    </body>
+</html>
+
